@@ -1,0 +1,3 @@
+Here are some bug fixes:
+
+- User needs to be able to go through books on the single book viewing page.

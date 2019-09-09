@@ -1,0 +1,99 @@
+@mixin navbar-container {
+    display: inline-block;
+    width: 10%;
+    border-right: 1px solid $black;
+    top: 0;
+    position: fixed;
+    
+    nav {
+
+        ul {
+            margin-top: 100px;
+            padding: 0;
+            height: 100vh;
+
+            li {
+                list-style: none;
+                font-family: $font-family-sans-pro;
+                font-weight: 200;
+                padding: 20px;
+                padding-left: 40px;
+                padding-right: 40px;
+                font-size: 19px;
+                transition: .6s ease all;
+
+                a {
+                    transition: .6s ease all;
+                    color: $black;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: none;
+                        color: $white;
+                    }
+                }
+
+                &:hover {
+                    transition: .6s ease all;
+                    background-color: $blue;
+                    color: $white;
+                    padding-left: 35px;
+                    border-left: 5px solid $black;
+                    cursor: pointer;
+                }
+
+                &:hover > a {
+                    transition: .6s ease all;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+@mixin book-cover-black-overlay( $width , $border-radius , $box-shadow ) {
+    .book {
+        width: $width;
+        height: 400px;
+        margin: 0 auto;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+
+        &:hover > .buy-option {
+            opacity: 1;
+            transition: 0.6s ease all;
+            cursor: pointer;
+        }
+
+        .buy-option {
+            border-radius: $border-radius;
+            transition: 0.6s ease all;
+            opacity: 0;
+            display: flex;
+            background-color: $black-transparent;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+
+            .cart-icon {
+                align-self: center;
+                width: 50px;
+                height: 50px;
+
+                .red-circle {
+                    background-color: $red;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+
+                    p {
+                        padding-top: 0;
+                        margin-top: 0;
+                        color: $white;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

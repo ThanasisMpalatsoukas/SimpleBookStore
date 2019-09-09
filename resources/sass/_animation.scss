@@ -1,0 +1,55 @@
+@keyframes bounce {
+    0% {
+      margin-top:0px;
+    }
+    50% {
+      margin-top:-25px;
+    }
+    100% {
+      margin-top:0px;
+    }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity :0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    margin-top: -10%;
+    opacity: 0;
+  }
+  30% {
+    margin-top: 20%;
+    opacity: 1;
+  }
+  50% {
+    margin-top: 20%;
+    opacity: 1;
+  }
+  70% {
+    margin-top: 20%;
+    opacity: 1;
+  }
+  100% {
+    margin-top: -10%;
+    opacity: 0; 
+  }
+}
+
+@keyframes wubble {
+  0% {
+    font-size: 34px;
+  }
+  50% {
+    font-size: 38px;
+  }
+  100% {
+    font-size: 34px;
+  }
+}

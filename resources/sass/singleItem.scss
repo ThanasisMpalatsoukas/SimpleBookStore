@@ -1,0 +1,436 @@
+@import 'variables';
+
+.image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.single-item-header {
+    height: 80px;
+    background-color: $black;
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .logo {
+        float: left;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-top: 10px;
+        margin-left: 100px;
+    }
+
+    .cart {
+        width: 38px;
+        height: 38px;
+        float: right;
+        margin-top: 18px;
+        margin-right: 0;
+
+        .red-circle {
+            display: none;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background-color: $red;
+        }
+
+        p {
+            color: $white;
+            font-weight: bold;
+            margin-top: -16px;
+            margin-left: 4px;
+            //position: absolute;
+            font-size: 12px;
+            z-index: 100;
+        }
+    }
+    
+    .user {
+        background-size: contain;
+        background-repeat: none;
+        background-position: center;
+        float: right;
+        height: 38px;
+        margin-left: 50px;
+        margin-right: 90px;
+        margin-top:18px;
+        width: 38px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.single-item {
+    width: 100%;
+    display: flex;
+
+    .navbar-container {
+        flex-grow: 1;
+        border-right: 1px solid $black;
+
+        nav {
+
+            ul {
+                padding: 0;
+                height: 90vh;
+
+                li {
+                    list-style: none;
+                    font-family: $font-family-sans-pro;
+                    font-weight: 200;
+                    padding: 20px;
+                    padding-left: 40px;
+                    padding-right: 40px;
+                    font-size: 19px;
+                    transition: .6s ease all;
+
+                    &:hover {
+                        transition: .6s ease all;
+                        background-color: $blue;
+                        color: $white;
+                        padding-left: 35px;
+                        border-left: 5px solid $black;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .content-container {
+        flex-grow: 6;
+        display: flex;
+
+        .book-cover-container {
+            min-width: 500px;
+            height: 500px;
+            flex-grow: 4;
+            margin: 50px;
+            border: 1px solid $grey-transparent;
+            position: relative;
+
+            .discount {
+                display: flex;
+                width: 100%;
+                height: 70px;
+                background-color: $white;
+                border-bottom: 1px solid $grey-transparent;
+                background-color: $black-transparent;
+                justify-content: center;
+
+                p { 
+                    font-family: $font-family-sans-pro;
+                    font-weight: 700;
+                    color: $white;
+                    font-size: 25px;
+                    align-self: center;
+                    padding-top: 0;
+                    margin: 0;
+                    text-align: center;
+                }
+            }
+        }
+
+        .book-info {
+            flex-grow: 1;
+
+            table {
+                margin-top: 50px;
+                width: 60%;
+
+                th {
+                    font-family: $font-family-sans-pro;
+                    font-weight: 700;
+                    font-size: 26px;
+                    padding-bottom: 20px;
+                    text-align: left;
+                    border-bottom: 1px solid $grey-transparent;
+                }
+
+                tr {
+                    border-bottom: 1px solid $grey-transparent;
+                    padding-bottom: 10px;
+                }
+
+                .description {
+                    font-size: 20px;
+                    font-weight: 400;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                }
+
+                .price {
+                    font-size: 30px;
+                    color: $black;
+                    opacity: 1;
+
+                    .strikethrough {
+                        opacity: 0.6;
+                        text-decoration: line-through;
+                        font-size: 20px;
+                        margin-left: 3px;
+                    }
+                }
+
+                td {
+                    font-family: $font-family-sans-pro;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-right: 100px;
+                    font-size: 14px;
+                    border-bottom: 1px solid $grey-transparent;
+                    color: $black;
+                    opacity: .65;
+
+                    &:nth-child(2) {
+                        padding-right: 140px;
+                    }
+
+                    &:first-child {
+                        font-weight: 700;
+                    }
+
+                    button {
+                        background-color: $white;
+                        border-radius: 0;
+                        border: 1px solid $black;
+                        padding: 10px;
+                        font-size: 18px;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        transition: .6s ease all;
+
+                        &:hover {
+                            background-color: $black;
+                            color: $white;
+                            transition: .6s ease all;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Warning signs
+.warning {
+    position: fixed;
+    z-index: 400;
+    width: 40%;
+    height: 100px;
+    text-align:center;
+    background-color: $red;
+    color: $white;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: -10%;
+    opacity: 0;
+    display: none;
+
+    p {
+        align-self: center;
+        font-family: $font-family-sans-pro;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
+// Purchase confirmation
+
+.confirm-purchase {
+    width: 35%;
+    height: 100px;
+    top: 40%;
+    position: absolute;
+    background-color: $white;
+    box-shadow: 1px 1px 2px 2px $black-transparent;
+    z-index: 100;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+
+    p {
+        text-align: center;
+        color: $green;
+        font-family: $font-family-sans-pro;
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 40px;
+    }
+}
+
+// Login-card
+.login-black-container {
+    display: none;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    background-color: $black-transparent;
+    display: flex;
+    justify-content: center;
+
+    .login-card {
+        width: 60%;
+        height: 60%;
+        background-color: $white;
+        border: 1 px solid $black;
+        border-radius: 5px;
+        align-self: center;
+        display: flex;
+        position: relative;
+
+        .exit-icon {
+            position: absolute;
+            background-size: initial;
+            right: 0;
+            top: 0;
+            height: 35px;
+            margin: 30px;
+            width: 35px;
+            opacity: 1;
+            transition: 0.6s ease all;
+
+            &:hover {
+                cursor: pointer;
+                transform: rotate(180deg);
+                transition: 0.6s ease all;
+            }
+        }
+
+        button {
+            border: 1px solid $black;
+            color: $black;
+            font-family: $font-family-sans-pro;
+            font-weight: 400;
+            background-color: $white;
+            border-radius: 0;
+            width: 100%;
+            margin-top: 30px;
+            padding: 10px;
+            transition: .6s ease all;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $black;
+                color: $white;
+                transition: .6s ease all;
+            }
+        }
+
+        .login {
+            min-width: 50%;
+            flex-grow: 1;
+            height: 90%;
+            border-right: 1px solid $grey-transparent;
+            align-self: center;
+            display: flex;
+            justify-content: center;
+
+            table {
+                align-self: center;
+
+                th {
+                    text-align: center;
+                    font-family: $font-family-sans-pro;
+                    font-weight: 700;
+                    font-size: 25px;
+                    padding-bottom: 50px;
+                }
+
+                td {
+                    font-family: $font-family-sans-pro;
+                    font-weight: 200;
+                    font-size: 20px;
+                    padding: 3px 20px 3px 0px;
+
+                    input {
+                        border-radius: 0;
+                        border: 1px solid $black;
+                        padding: 10px;
+                        background-color: $white;
+                        transition: 0.6s ease all;
+                        font-family: $font-family-sans-pro;
+                        text-align: center;
+                        font-weight: 200;
+
+                        &:focus {
+                            border-radius: 5px;
+                            transition: 0.6s ease all;
+                            background-color: $white;
+                            border-radius: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .register {
+            min-width: 50%;
+            flex-grow: 1;
+            height: 90%;
+            border-right: 1px solid $grey-transparent;
+            align-self: center;
+            display: flex;
+            justify-content: center;
+
+            table {
+                align-self: center;
+
+                th {
+                    text-align: center;
+                    font-family: $font-family-sans-pro;
+                    font-weight: 700;
+                    font-size: 25px;
+                    padding-bottom: 50px;
+                }
+
+                td {
+                    font-family: $font-family-sans-pro;
+                    font-weight: 200;
+                    font-size: 20px;
+                    padding: 3px 20px 3px 0px;
+
+                    input {
+                        border-radius: 0;
+                        border: 1px solid $black;
+                        padding: 10px;
+                        background-color: $white;
+                        transition: 0.6s ease all;
+                        font-family: $font-family-sans-pro;
+                        text-align: center;
+                        font-weight: 200;
+
+                        &:focus {
+                            border-radius: 5px;
+                            transition: 0.6s ease all;
+                            background-color: $white;
+                            border-radius: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

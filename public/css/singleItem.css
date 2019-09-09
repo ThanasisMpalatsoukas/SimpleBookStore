@@ -1,0 +1,329 @@
+.image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+body {
+  padding: 0;
+  margin: 0; }
+
+.single-item-header {
+  height: 80px;
+  background-color: #000000; }
+  .single-item-header .container {
+    width: 80%;
+    margin: 0 auto; }
+  .single-item-header .logo {
+    float: left;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 100px; }
+  .single-item-header .cart {
+    width: 38px;
+    height: 38px;
+    float: right;
+    margin-top: 18px;
+    margin-right: 0; }
+    .single-item-header .cart .red-circle {
+      display: none;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background-color: #e3342f; }
+    .single-item-header .cart p {
+      color: #ffffff;
+      font-weight: bold;
+      margin-top: -16px;
+      margin-left: 4px;
+      font-size: 12px;
+      z-index: 100; }
+  .single-item-header .user {
+    background-size: contain;
+    background-repeat: none;
+    background-position: center;
+    float: right;
+    height: 38px;
+    margin-left: 50px;
+    margin-right: 90px;
+    margin-top: 18px;
+    width: 38px; }
+    .single-item-header .user:hover {
+      cursor: pointer; }
+
+.single-item {
+  width: 100%;
+  display: flex; }
+  .single-item .navbar-container {
+    flex-grow: 1;
+    border-right: 1px solid #000000; }
+    .single-item .navbar-container nav ul {
+      padding: 0;
+      height: 90vh; }
+      .single-item .navbar-container nav ul li {
+        list-style: none;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 200;
+        padding: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size: 19px;
+        transition: .6s ease all; }
+        .single-item .navbar-container nav ul li:hover {
+          transition: .6s ease all;
+          background-color: #3490dc;
+          color: #ffffff;
+          padding-left: 35px;
+          border-left: 5px solid #000000;
+          cursor: pointer; }
+  .single-item .content-container {
+    flex-grow: 6;
+    display: flex; }
+    .single-item .content-container .book-cover-container {
+      min-width: 500px;
+      height: 500px;
+      flex-grow: 4;
+      margin: 50px;
+      border: 1px solid rgba(117, 117, 117, 0.5);
+      position: relative; }
+      .single-item .content-container .book-cover-container .discount {
+        display: flex;
+        width: 100%;
+        height: 70px;
+        background-color: #ffffff;
+        border-bottom: 1px solid rgba(117, 117, 117, 0.5);
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center; }
+        .single-item .content-container .book-cover-container .discount p {
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 700;
+          color: #ffffff;
+          font-size: 25px;
+          align-self: center;
+          padding-top: 0;
+          margin: 0;
+          text-align: center; }
+    .single-item .content-container .book-info {
+      flex-grow: 1; }
+      .single-item .content-container .book-info table {
+        margin-top: 50px;
+        width: 60%; }
+        .single-item .content-container .book-info table th {
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 700;
+          font-size: 26px;
+          padding-bottom: 20px;
+          text-align: left;
+          border-bottom: 1px solid rgba(117, 117, 117, 0.5); }
+        .single-item .content-container .book-info table tr {
+          border-bottom: 1px solid rgba(117, 117, 117, 0.5);
+          padding-bottom: 10px; }
+        .single-item .content-container .book-info table .description {
+          font-size: 20px;
+          font-weight: 400;
+          padding-top: 20px;
+          padding-bottom: 20px; }
+        .single-item .content-container .book-info table .price {
+          font-size: 30px;
+          color: #000000;
+          opacity: 1; }
+          .single-item .content-container .book-info table .price .strikethrough {
+            opacity: 0.6;
+            text-decoration: line-through;
+            font-size: 20px;
+            margin-left: 3px; }
+        .single-item .content-container .book-info table td {
+          font-family: "Source Sans Pro", sans-serif;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-right: 100px;
+          font-size: 14px;
+          border-bottom: 1px solid rgba(117, 117, 117, 0.5);
+          color: #000000;
+          opacity: .65; }
+          .single-item .content-container .book-info table td:nth-child(2) {
+            padding-right: 140px; }
+          .single-item .content-container .book-info table td:first-child {
+            font-weight: 700; }
+          .single-item .content-container .book-info table td button {
+            background-color: #ffffff;
+            border-radius: 0;
+            border: 1px solid #000000;
+            padding: 10px;
+            font-size: 18px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            transition: .6s ease all; }
+            .single-item .content-container .book-info table td button:hover {
+              background-color: #000000;
+              color: #ffffff;
+              transition: .6s ease all;
+              cursor: pointer; }
+
+.warning {
+  position: fixed;
+  z-index: 400;
+  width: 40%;
+  height: 100px;
+  text-align: center;
+  background-color: #e3342f;
+  color: #ffffff;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: -10%;
+  opacity: 0;
+  display: none; }
+  .warning p {
+    align-self: center;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    font-size: 16px; }
+
+.confirm-purchase {
+  width: 35%;
+  height: 100px;
+  top: 40%;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  border-radius: 5px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0; }
+  .confirm-purchase p {
+    text-align: center;
+    color: #38c172;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 40px; }
+
+.login-black-container {
+  display: none;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center; }
+  .login-black-container .login-card {
+    width: 60%;
+    height: 60%;
+    background-color: #ffffff;
+    border: 1 px solid #000000;
+    border-radius: 5px;
+    align-self: center;
+    display: flex;
+    position: relative; }
+    .login-black-container .login-card .exit-icon {
+      position: absolute;
+      background-size: initial;
+      right: 0;
+      top: 0;
+      height: 35px;
+      margin: 30px;
+      width: 35px;
+      opacity: 1;
+      transition: 0.6s ease all; }
+      .login-black-container .login-card .exit-icon:hover {
+        cursor: pointer;
+        transform: rotate(180deg);
+        transition: 0.6s ease all; }
+    .login-black-container .login-card button {
+      border: 1px solid #000000;
+      color: #000000;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 400;
+      background-color: #ffffff;
+      border-radius: 0;
+      width: 100%;
+      margin-top: 30px;
+      padding: 10px;
+      transition: .6s ease all; }
+      .login-black-container .login-card button:hover {
+        cursor: pointer;
+        background-color: #000000;
+        color: #ffffff;
+        transition: .6s ease all; }
+    .login-black-container .login-card .login {
+      min-width: 50%;
+      flex-grow: 1;
+      height: 90%;
+      border-right: 1px solid rgba(117, 117, 117, 0.5);
+      align-self: center;
+      display: flex;
+      justify-content: center; }
+      .login-black-container .login-card .login table {
+        align-self: center; }
+        .login-black-container .login-card .login table th {
+          text-align: center;
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 700;
+          font-size: 25px;
+          padding-bottom: 50px; }
+        .login-black-container .login-card .login table td {
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 200;
+          font-size: 20px;
+          padding: 3px 20px 3px 0px; }
+          .login-black-container .login-card .login table td input {
+            border-radius: 0;
+            border: 1px solid #000000;
+            padding: 10px;
+            background-color: #ffffff;
+            transition: 0.6s ease all;
+            font-family: "Source Sans Pro", sans-serif;
+            text-align: center;
+            font-weight: 200; }
+            .login-black-container .login-card .login table td input:focus {
+              border-radius: 5px;
+              transition: 0.6s ease all;
+              background-color: #ffffff;
+              border-radius: 20px; }
+    .login-black-container .login-card .register {
+      min-width: 50%;
+      flex-grow: 1;
+      height: 90%;
+      border-right: 1px solid rgba(117, 117, 117, 0.5);
+      align-self: center;
+      display: flex;
+      justify-content: center; }
+      .login-black-container .login-card .register table {
+        align-self: center; }
+        .login-black-container .login-card .register table th {
+          text-align: center;
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 700;
+          font-size: 25px;
+          padding-bottom: 50px; }
+        .login-black-container .login-card .register table td {
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 200;
+          font-size: 20px;
+          padding: 3px 20px 3px 0px; }
+          .login-black-container .login-card .register table td input {
+            border-radius: 0;
+            border: 1px solid #000000;
+            padding: 10px;
+            background-color: #ffffff;
+            transition: 0.6s ease all;
+            font-family: "Source Sans Pro", sans-serif;
+            text-align: center;
+            font-weight: 200; }
+            .login-black-container .login-card .register table td input:focus {
+              border-radius: 5px;
+              transition: 0.6s ease all;
+              background-color: #ffffff;
+              border-radius: 20px; }
+
+/*# sourceMappingURL=singleItem.css.map */

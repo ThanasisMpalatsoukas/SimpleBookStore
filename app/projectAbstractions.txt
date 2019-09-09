@@ -1,0 +1,4 @@
+Abstractions :
+
+    - The paginate method can be abstracted totally
+    - The table in reactJs can be abstracted 
