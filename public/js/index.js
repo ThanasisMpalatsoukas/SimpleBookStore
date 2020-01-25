@@ -918,10 +918,10 @@ function swapMenu() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\braintree_payment\resources\js\index.js */"./resources/js/index.js");
-__webpack_require__(/*! C:\xampp\htdocs\braintree_payment\resources\sass\admin.scss */"./resources/sass/admin.scss");
-__webpack_require__(/*! C:\xampp\htdocs\braintree_payment\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\braintree_payment\resources\sass\index.scss */"./resources/sass/index.scss");
+__webpack_require__(/*! C:\xampp\htdocs\SimpleBookStore\resources\js\index.js */"./resources/js/index.js");
+__webpack_require__(/*! C:\xampp\htdocs\SimpleBookStore\resources\sass\admin.scss */"./resources/sass/admin.scss");
+__webpack_require__(/*! C:\xampp\htdocs\SimpleBookStore\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\SimpleBookStore\resources\sass\index.scss */"./resources/sass/index.scss");
 
 
 /***/ })

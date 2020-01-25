@@ -82735,7 +82735,7 @@ function (_Component) {
     }
   }, {
     key: "getPaginatedResults",
-    value: function getPaginatedResults() {
+    value: function getPaginatedResults(event) {
       var _this2 = this;
 
       var datapage = 0;
@@ -87440,7 +87440,7 @@ if (token) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\braintree_payment\resources\js\admin\index.js */"./resources/js/admin/index.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\SimpleBookStore\resources\js\admin\index.js */"./resources/js/admin/index.js");
 
 
 /***/ })

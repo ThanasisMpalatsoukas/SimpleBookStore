@@ -86,7 +86,7 @@ class StripedTable extends Component {
         }
     }
 
-    getPaginatedResults() {
+    getPaginatedResults(event) {
 
         let datapage = 0;
         if( event != undefined) {

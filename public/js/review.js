@@ -62286,7 +62286,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\braintree_payment\resources\js\review.js */"./resources/js/review.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\SimpleBookStore\resources\js\review.js */"./resources/js/review.js");
 
 
 /***/ })
